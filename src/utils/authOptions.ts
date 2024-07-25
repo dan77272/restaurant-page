@@ -13,7 +13,7 @@ type User = {
   role: string;
 }
 
-export const authOptions: NextAuthOptions = {
+    const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: 'Credentials',
@@ -64,3 +64,5 @@ export const authOptions: NextAuthOptions = {
     secret: process.env.NEXTAUTH_SECRET,
   }
 };
+
+export { authOptions }
