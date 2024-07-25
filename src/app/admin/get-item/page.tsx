@@ -3,7 +3,7 @@
 import AdminNavbar from "@/components/AdminNavbar"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 
 type MenuItem = {
     id: number,
@@ -77,7 +77,9 @@ export default function GetItem() {
                                     <p className="text-lg text-gray-800">${item.price}</p>
                                 </div>
                                 <div className="flex gap-5">
-                                    <Link href={`/admin/get-item/edit?id=${item.id}`} className="bg-yellow-500 px-4 py-2 rounded-md hover:bg-yellow-600">Edit</Link>
+                                    <Suspense>
+                                        <Link href={`/admin/get-item/edit?id=${item.id}`} className="bg-yellow-500 px-4 py-2 rounded-md hover:bg-yellow-600">Edit</Link>
+                                    </Suspense>
                                     <button className="bg-red-500 px-4 py-2 rounded-md hover:bg-red-600" onClick={() => deleteItem(item.id)}>Delete</button>
                                 </div>
                             </div>
