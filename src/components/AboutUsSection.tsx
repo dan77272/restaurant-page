@@ -26,7 +26,7 @@ export default function AboutUsSection(){
                 </p>
             </div>
             <div id="image" className="col-span-1 flex justify-center xl:mr-auto xl:translate-x-[1000px]">
-                <Image src={'/mashawi.jpg'} height={400} width={400} alt="mashawi"/>
+                <Image src={'/mashawi.jpg'} height={400} width={400} alt="mashawi" className="h-auto"/>
             </div>
         </div>
     )
